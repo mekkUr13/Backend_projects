@@ -1,40 +1,56 @@
-# 🚀 Backend Projects Portfolio
+# 🚀 Backend Projects
 
-Welcome to my Backend Projects repository! This repository serves as a portfolio of my personal programming projects and university assignments, demonstrating my skills in backend development, API design, and software architecture. 
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688)](https://fastapi.tiangolo.com/)
+[![Pydantic](https://img.shields.io/badge/Pydantic-e92063)](https://docs.pydantic.dev/)
 
----
-
-## 📂 Repository Structure
-
-Below is an overview of the projects currently included in this repository. Each project is contained within its own dedicated subfolder, complete with its own source code, configurations, and documentation.
-
-### 1. `Courses_fastapi_backend` (Culinary Institute Management API)
-**Technologies Used:** Python, FastAPI, Uvicorn, Pydantic
-**Key Concepts:** RESTful APIs, JSON File Handling, Exception Handling, Data Validation, Endpoint Routing
-
-**Description:**
-This project is a fast and responsive RESTful API built with **FastAPI** to manage a Culinary Training Institute (Szakácsképző Intézmény). It handles the administration of courses, instructors, and students.
-It was made for one of my university courses, so it is mainly written in hungarian.
-
-**Features:**
-- **Course Management:** Track course IDs, names (e.g., Soups, Roasts, Side Dishes, Salads, Desserts), types (lecture, practice), year, schedule, location, assigned instructor, enrolled students, and maximum capacity.
-- **Instructor & Student Data:** Manage instructor and student profiles including names, IDs, and emails.
-- **Persistent Storage:** Handles file-based data persistence reading from and writing to `kurzusok.json`.
-- **Structured Architecture:** The logic is neatly separated into modules:
-  - `modellek.py`: Defines the strictly typed Pydantic data models.
-  - `fajl_kezeles.py`: Manages the underlying JSON read/write logic.
-  - `utvonalak.py`: Hands the API routing and logic implementation.
-- **Interactive Documentation:** Automatically generates interactive Swagger UI documentation for easy API testing and exploration.
-
-**How to run it:**
-1. Navigate to the `Courses_fastapi_backend` directory.
-2. Install the required dependencies: `pip install fastapi uvicorn`
-3. Run the application: `python app_sz/main.py`
-4. Open your browser and go to `http://127.0.0.1:8000/docs` to interact with the API endpoints.
+A collection of backend / API projects showcasing my work in **RESTful API design, data validation, and
+clean, modular service architecture**. Each project lives in its own self-contained subfolder with its own
+source, configuration and docs.
 
 ---
 
-## 🛠️ Skills & Technologies Demonstrated
-- **Languages:** Python
-- **Frameworks & Libraries:** FastAPI, Pydantic, Starlette
-- **Concepts:** RESTful API Design, Error Handling (`HTTPException`), File I/O, Modular Programming, Object-Oriented Principles.
+## 📂 Projects
+
+### `Courses_fastapi_backend` — Culinary Institute Management API
+
+A fast, responsive **RESTful API built with FastAPI** for administering a culinary training institute —
+managing its courses, instructors and students.
+
+**Tech stack:** Python · FastAPI · Uvicorn · Pydantic · Starlette
+**Concepts:** REST API design · request/response validation · exception handling · endpoint routing · file-based persistence · modular architecture
+
+**Highlights**
+
+- **Course management** — tracks course IDs, names, type (lecture/practice), year, schedule, location,
+  the assigned instructor, enrolled students and maximum capacity.
+- **People management** — instructor and student profiles (names, IDs, emails).
+- **Strong typing & validation** — all payloads are modeled and validated with Pydantic, so malformed
+  requests are rejected with clear errors.
+- **Persistent storage** — reads from and writes to a JSON store (`kurzusok.json`).
+- **Clean separation of concerns**
+  - `modellek.py` — Pydantic data models
+  - `fajl_kezeles.py` — JSON read/write persistence layer
+  - `utvonalak.py` — API routes and endpoint logic
+- **Interactive docs** — auto-generated Swagger UI for exploring and testing every endpoint.
+
+> The domain vocabulary (courses, roles) is in Hungarian, reflecting the institute it models; the
+> architecture and API design are language-agnostic.
+
+**Run it**
+
+```bash
+cd Courses_fastapi_backend
+pip install fastapi uvicorn
+python app_sz/main.py
+# then open http://127.0.0.1:8000/docs
+```
+
+---
+
+## 🛠️ Skills demonstrated
+
+- **Language:** Python
+- **Frameworks & libraries:** FastAPI, Pydantic, Starlette, Uvicorn
+- **Concepts:** RESTful API design, error handling (`HTTPException`), file I/O, modular programming,
+  object-oriented design.
