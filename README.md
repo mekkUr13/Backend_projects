@@ -2,6 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688)](https://fastapi.tiangolo.com/)
+[![Flask](https://img.shields.io/badge/Flask-000000)](https://flask.palletsprojects.com/)
 [![Pydantic](https://img.shields.io/badge/Pydantic-e92063)](https://docs.pydantic.dev/)
 
 A collection of backend / API projects showcasing my work in **RESTful API design, data validation, and
@@ -48,9 +49,44 @@ python app_sz/main.py
 
 ---
 
+### `Flaskprojekt` — Flask Fundamentals: A Message-Board App, Built Step by Step
+
+A progressive, hands-on tour of **server-side web development with Flask**, building the same message-board
+(*üzenőfal*) application up from a single route to a full authenticated CRUD app. Each numbered folder
+(`01`–`09`) is a self-contained stage that adds one new capability.
+
+**Tech stack:** Python · Flask · Jinja2 · Flask-WTF / WTForms · Flask-SQLAlchemy · Flask-Bcrypt · Flask-Login
+**Concepts:** routing & views · templating · form handling & validation · ORM/database modelling · app packaging (blueprints & app factory) · authentication · full CRUD
+
+**What each stage covers**
+
+- **`01-Flask-Alapok`** — Flask basics: the app object, routes and returning responses.
+- **`02-Templates` / `03-Jinja`** — server-side rendering with Jinja2 templates and template logic.
+- **`04-Form` / `04-Form-Advanced`** — HTML forms with Flask-WTF / WTForms and server-side validation.
+- **`05-Database`** — persistence with Flask-SQLAlchemy (models, queries, migrations).
+- **`06-Package`** — restructuring into a proper Python package with an app factory and config.
+- **`07-User-Registration` / `08-Login`** — user accounts with Flask-Bcrypt password hashing and
+  Flask-Login sessions.
+- **`09-CRUD`** — the finished app: authenticated create / read / update / delete on message-board posts.
+
+> Built by following a Flask tutorial series to solidify web-backend fundamentals; each stage has its own
+> `requirements.txt` so it can be run in isolation.
+
+**Run it** (example — the final CRUD stage)
+
+```bash
+cd Flaskprojekt/09-CRUD
+pip install -r requirements.txt
+python run.py
+```
+
+---
+
 ## 🛠️ Skills demonstrated
 
 - **Language:** Python
-- **Frameworks & libraries:** FastAPI, Pydantic, Starlette, Uvicorn
-- **Concepts:** RESTful API design, error handling (`HTTPException`), file I/O, modular programming,
-  object-oriented design.
+- **Frameworks & libraries:** FastAPI, Pydantic, Starlette, Uvicorn · Flask, Jinja2, Flask-WTF/WTForms,
+  Flask-SQLAlchemy, Flask-Bcrypt, Flask-Login
+- **Concepts:** RESTful API design, server-side rendering, form handling & validation, ORM/database
+  modelling, authentication, error handling (`HTTPException`), file I/O, modular programming and app
+  packaging, object-oriented design.
